@@ -882,7 +882,7 @@ namespace VNPT.SNV.Api.DatasRepo
                     insertData[field.FieldNameDB] = DatasHelper.ConvertToDataType(field.DefaultValue, field.DataType);
                 }
             }
-            insertData["CreationTime"] = DateTime.UtcNow;
+            insertData["CreationTime"] = DateTime.Now;
             insertData["CreatorUserId"] = AbpSession.UserId;
             return insertData;
         }
@@ -1035,7 +1035,7 @@ namespace VNPT.SNV.Api.DatasRepo
                     updateData[field.FieldNameDB] = value;
                 }
             }
-            updateData["LastModificationTime"] = DateTime.UtcNow;
+            updateData["LastModificationTime"] = DateTime.Now;
             updateData["LastModifierUserId"] = AbpSession.UserId;
             return updateData;
         }
